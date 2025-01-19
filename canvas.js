@@ -56,7 +56,7 @@ function Circle(x, y, dx, dy, radius, color) {
 
 var circles = [];
 
-for (let i = 0; i < 100; i++) {
+for (let i = 0; i < 10; i++) {
 	var x = Math.random() * innerWidth;
 	var y = Math.random() * innerHeight;
 	var dx = (Math.random() - 0.5) * 15;
@@ -69,7 +69,7 @@ for (let i = 0; i < 100; i++) {
 
 function animate() {
 	requestAnimationFrame(animate);
-	c.clearRect(0, 0, innerWidth, innerHeight);
+	// c.clearRect(0, 0, innerWidth, innerHeight);
 
 	for (var i = 0; i < circles.length; i++) {
 		circles[i].update();
