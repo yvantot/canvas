@@ -57,11 +57,11 @@ function Circle(x, y, dx, dy, radius, color) {
 var circles = [];
 
 for (let i = 0; i < 10; i++) {
-	var x = Math.random() * innerWidth;
-	var y = Math.random() * innerHeight;
-	var dx = (Math.random() - 0.5) * 15;
-	var dy = (Math.random() - 0.5) * 15;
-	var radius = Math.random() * 50;
+	var radius = 50;
+	var x = Math.random() * (innerWidth - radius * 2) + radius;
+	var y = Math.random() * (innerHeight - radius * 2) + radius;
+	var dx = (Math.random() - 0.5) * 5;
+	var dy = (Math.random() - 0.5) * 5;
 
 	var circle = new Circle(x, y, dx, dy, radius, "blue");
 	circles.push(circle);
