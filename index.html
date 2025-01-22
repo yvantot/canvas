@@ -3,16 +3,93 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
+		<title>Canvas Mastery</title>
+		<link rel="stylesheet" href="global.css" />
+		<script src="./index.js" defer></script>
 		<style>
+			*,
+			*::before,
+			*::after {
+				font-family: Montserrat;
+				font-size: 16px;
+			}
 			body {
-				margin: 0;
-				padding: 0;
+				width: fit-content;
+				margin: 2rem auto;
+				background-color: #242424;
+				color: #fafafa;
+				text-align: center;
+			}
+			h2 {
+				margin-top: 1rem;
+			}
+			.artists {
+				margin-top: 0.5rem;
+				display: flex;
+				gap: 10px;
+				justify-content: center;
+				align-items: center;
+			}
+			.artists p {
+				font-size: 0.8rem;
+				color: hsl(240, 90%, 90%);
+			}
+			a {
+				font-style: normal;
+				text-decoration: none;
+				color: hsl(50, 50%, 50%);
+			}
+			.creations {
+				margin-top: 0.5rem;
+				display: flex;
+				gap: 10px;
+				justify-content: center;
+				align-items: center;
+				flex-wrap: wrap;
+			}
+			.creations a {
+				padding: 10px;
+				background-color: hsl(50, 10%, 20%);
+				border-radius: 10px;
+				border: 1px solid rgba(255, 255, 255, 0.2);
+				transition: transform 0.3s ease;
+			}
+			.creations a:hover {
+				transform: scale(1.1, 1.1);
+			}
+			h1 {
+				font-size: 1.5rem;
+			}
+			h2 {
+				font-size: 0.9rem;
+				margin-bottom: 0.7rem;
+				color: hsl(50, 70%, 50%);
+			}
+			body > p {
+				opacity: 0.6;
+				margin-top: 0.5rem;
+				font-size: 0.8rem;
 			}
 		</style>
-		<script src="./canvas.js" defer></script>
 	</head>
 	<body>
+		<h1>Canvas Mastery</h1>
+		<p>"Canvassing" - 2025, Lariosi</p>
+		<h2>Artists</h2>
+		<div class="artists">
+			<p>Ivanne</p>
+			<p>Rass</p>
+			<p>Rodge</p>
+			<p>Kurt</p>
+			<p>Christian</p>
+		</div>
+		<div>
+			<h2>Creations</h2>
+			<div class="creations">
+				<a href="./projects/boilerplate/boilerplate.html">Boilerplate</a>
+				<a href="./projects/collision-sample/collision.html">Hungry!</a>
+			</div>
+		</div>
 		<canvas>Not supported</canvas>
 	</body>
 </html>

@@ -24,6 +24,8 @@ function getRandomNum(min, max, truncate = false) {
 	return random;
 }
 
+// Create a new Class for Player and extend Circle
+// Add properties such as health, scores and event emitters
 class Circle {
 	constructor(x, y, dx, dy, radius, color) {
 		this.x = x;
@@ -98,7 +100,7 @@ for (let i = 0; i < 500; i++) {
 				j = -1;
 			}
 		}
-		circles.push(new Circle(x, y, vx, vy, radius, "blue"));
+		circles.push(new Circle(x, y, vx, vy, radius, `hsl(${i % 360}, 50%, 50%)`));
 	}
 }
 
@@ -127,6 +129,8 @@ function animate() {
 	requestAnimationFrame(animate);
 	c.clearRect(0, 0, innerWidth, innerHeight);
 	const { w, a, s, d } = keypress;
+	c.font = "15px Montserrat";
+	c.fillText("Player", player.x, player.y - player.radius);
 	if (a) player.x -= 1;
 	if (d) player.x += 1;
 	if (w) player.y -= 1;
