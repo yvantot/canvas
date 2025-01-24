@@ -83,7 +83,7 @@ window.addEventListener("resize", () => {
 const circles = [];
 
 const player = new Circle(innerWidth / 2, innerHeight / 2, 0, 0, 5);
-player.color = "orange";
+player.color = "hsl(0, 0%, 0%)";
 circles.push(player);
 
 for (let i = 0; i < 500; i++) {
