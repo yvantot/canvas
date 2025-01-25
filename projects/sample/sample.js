@@ -27,12 +27,12 @@ function init() {
 	// object/preparation logic
 
 	// EXAMPLE, replace with your own
-	circles.unshift(new Circle(screen.xCenter, screen.yCenter, 0, 0, 10, "hsl(50, 100%, 50%)"));
-	circles.unshift(new Circle(screen.xCenter, screen.yCenter, 0, 0, 20, "hsl(50, 90%, 60%)"));
-	circles.unshift(new Circle(screen.xCenter, screen.yCenter, 0, 0, 30, "hsl(50, 80%, 70%)"));
-	circles.unshift(new Circle(screen.xCenter, screen.yCenter, 0, 0, 40, "hsl(50, 70%, 80%)"));
-	circles.unshift(new Circle(screen.xCenter, screen.yCenter, 0, 0, 50, "hsl(50, 60%, 90%)"));
-	circles.unshift(new Circle(screen.xCenter, screen.yCenter, 0, 0, 60, "hsl(50, 50%, 100%)"));
+	circles.unshift(new Circle(screen.xCenter, screen.yCenter, 0, 0, 10, "hsla(50, 100%, 50%, 1)"));
+	circles.unshift(new Circle(screen.xCenter, screen.yCenter, 0, 0, 20, "hsla(50, 90%, 65%, 0.9)"));
+	circles.unshift(new Circle(screen.xCenter, screen.yCenter, 0, 0, 30, "hsla(50, 80%, 70%, 0.8)"));
+	circles.unshift(new Circle(screen.xCenter, screen.yCenter, 0, 0, 40, "hsla(50, 70%, 80%, 0.7)"));
+	circles.unshift(new Circle(screen.xCenter, screen.yCenter, 0, 0, 50, "hsla(50, 60%, 90%, 0.5)"));
+	circles.unshift(new Circle(screen.xCenter, screen.yCenter, 0, 0, 60, "hsla(50, 50%, 100%, 0.3)"));
 }
 
 // This function executes every frame as fast as possible

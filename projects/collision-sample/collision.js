@@ -82,16 +82,16 @@ window.addEventListener("resize", () => {
 
 const circles = [];
 
-const player = new Circle(innerWidth / 2, innerHeight / 2, 0, 0, 5);
+const player = new Circle(innerWidth / 2, innerHeight / 2, 0, 0, 3.25);
 player.color = "hsl(0, 0%, 0%)";
 circles.push(player);
 
 for (let i = 0; i < 500; i++) {
-	let radius = getRandomNum(3, 8);
+	let radius = getRandomNum(3, 3.5);
 	let x = getRandomNum(radius, innerWidth - radius);
 	let y = getRandomNum(radius, innerHeight - radius);
-	let vx = (Math.random() - 0.5) * 1;
-	let vy = (Math.random() - 0.5) * 1;
+	let vx = (Math.random() - 0.5) * 2;
+	let vy = (Math.random() - 0.5) * 2;
 	if (i !== 0) {
 		for (let j = 0; j < circles.length; j++) {
 			if (distance(x, y, circles[j].x, circles[j].y) - (radius + circles[j].radius) < 0) {

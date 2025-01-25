@@ -14,6 +14,8 @@ const mouse = {
 };
 
 const screen = {
+	width: innerWidth,
+	height: innerHeight,
 	xCenter: innerWidth * 0.5,
 	yCenter: innerHeight * 0.5,
 };
@@ -35,7 +37,7 @@ function init() {
 function animate() {
 	requestAnimationFrame(animate);
 	// animation logic
-
+	c.clearRect(0, 0, screen.width, screen.height);
 	// EXAMPLE, replace with your own
 	circles.forEach((circle) => circle.update());
 }
@@ -88,8 +90,13 @@ function getRandomNum(min, max, noDecimal) {
 // EVENT LISTENERS
 (() => {
 	window.addEventListener("resize", () => {
-		canvas.width = innerWidth;
-		canvas.height = innerHeight;
+		screen.width = innerWidth;
+		screen.height = innerHeight;
+		screen.xCenter = innerWidth * 0.5; // Multiplication is faster than division
+		screen.yCenter = innerHeight * 0.5;
+
+		canvas.width = screen.width;
+		canvas.height = screen.height;
 
 		// Initialize objects when resized()
 		init();
@@ -98,8 +105,6 @@ function getRandomNum(min, max, noDecimal) {
 	window.addEventListener("mousemove", ({ clientX, clientY }) => {
 		mouse.x = clientX;
 		mouse.y = clientY;
-		screen.xCenter = innerWidth * 0.5; // Multiplication is faster than division
-		screen.yCenter = innerHeight * 0.5;
 	});
 })();
 
