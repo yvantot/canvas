@@ -40,6 +40,7 @@ function animate() {
 	c.clearRect(0, 0, screen.width, screen.height);
 	// EXAMPLE, replace with your own
 	circles.forEach((circle) => circle.update());
+	console.log(circles[0].color);
 }
 
 // Classes/Objects
@@ -69,10 +70,13 @@ class Circle {
 	// Updates the data of this object
 	update() {
 		// EXAMPLE, replace with your own
+		this.color = `hsl(${this.radius % 360}, ${+(100 - (this.radius % 100))}%, ${this.radius % 100}%)`;
 		this.x += this.dx;
 		this.y += this.dy;
-		this.radius += this.i;
-		if (this.radius < 0 || this.radius >= this.trueRadius * 5) this.i = -this.i;
+		this.radius += this.i * (this.trueRadius * 0.02);
+		// radius less than 0 will result to flickering
+		if (this.radius <= 0 || this.radius >= this.trueRadius * 2) this.i = -this.i;
+		if (this.radius < 0) this.radius = 0;
 		this.draw();
 	}
 }
